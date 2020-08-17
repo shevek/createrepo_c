@@ -7,8 +7,8 @@ execute_process(COMMAND nosetests${NOSETEST_VERSION_SUFFIX} --help
                 OUTPUT_QUIET ERROR_QUIET
                 RESULT_VARIABLE NOSE_CHECK_RESULT)
 IF (NOT NOSE_CHECK_RESULT STREQUAL "0")
-    MESSAGE("Command 'nosetests${NOSETEST_VERSION_SUFFIX}' doesn't exist! Using only 'nosetests' instead")
-    SET(NOSETEST_VERSION_SUFFIX "")
+    MESSAGE("Command 'nosetests${NOSETEST_VERSION_SUFFIX}' doesn't exist! Using only 'nosetests3' instead")
+    SET(NOSETEST_VERSION_SUFFIX "3")
 ENDIF()
 
 CONFIGURE_FILE("run_nosetests.sh.in"  "${CMAKE_BINARY_DIR}/tests/python/tests/run_nosetests.sh")

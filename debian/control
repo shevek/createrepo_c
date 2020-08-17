@@ -1,0 +1,19 @@
+Source: createrepo-c
+Section: devel
+Priority: optional
+Maintainer: RPM packaging team <team+pkg-rpm@tracker.debian.org>
+Standards-Version: 4.5.0
+Build-Depends:
+ python3,
+ python3-nose,
+ libdrpm-dev,
+ libzck-dev,
+ libmodulemd-dev
+
+Package: createrepo-c
+Architecture: any
+Description: The C implementation of the tool for creating RPM repository metadata.
+Depends:
+ libdrpm0,
+ libzck1,
+ libmodulemd2
